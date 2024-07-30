@@ -1,0 +1,65 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "exercicio",
+    "dateExported": "2024-07-30T14:02:34.480Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3a34fc42-d70c-428f-b443-70e27fbf4814",
+            "colId": "8834e20d-d104-4873-84e7-76638ce022f0",
+            "containerId": "",
+            "name": "testeRequisicaoGet",
+            "url": "http://localhost/exercicio/api.php/cursos/9",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-30T12:17:29.494Z",
+            "modified": "2024-07-30T13:59:27.273Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d59095be-8e39-455b-888c-f582d4852055",
+            "colId": "8834e20d-d104-4873-84e7-76638ce022f0",
+            "containerId": "",
+            "name": "testeRequisicaoDelete",
+            "url": "http://localhost/exercicio/api.php",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-07-30T12:21:24.694Z",
+            "modified": "2024-07-30T12:21:52.016Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e5c86c3d-425b-4df4-bfbe-4868c00d473f",
+            "colId": "8834e20d-d104-4873-84e7-76638ce022f0",
+            "containerId": "",
+            "name": "testeRequisicaoPut",
+            "url": "http://localhost/exercicio/api.php",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-07-30T12:21:33.134Z",
+            "modified": "2024-07-30T12:21:48.687Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9a8f76ca-eb5e-46a8-81c5-84411e3b5940",
+            "colId": "8834e20d-d104-4873-84e7-76638ce022f0",
+            "containerId": "",
+            "name": "testeRequisicaoPost",
+            "url": "http://localhost/exercicio/api.php",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-07-30T12:21:54.771Z",
+            "modified": "2024-07-30T12:22:01.348Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
