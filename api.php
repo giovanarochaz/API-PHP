@@ -33,24 +33,16 @@
 
                 if(isset($path_parts[3])){
                     if(!is_numeric($path_parts[3])){
-                        echo json_encode([
-                            'mensagem' => 'LETRAS E SIMBOLOS NAO SAO PERMITIDOS!'
-                        ]);
+                        mensagem_error();
                         break;
                     } else{
-                        echo json_encode([
-                            'mensagem' => 'ALUNOS ESPECIFICO!',
-                            'Id' => $path_parts[3]
-                        ]);
+                        lista_especifica('alunos',  (int)$path_parts[3]);
                         break;
                     }
                 } else{
-                    echo json_encode([
-                        'mensagem' => 'ALUNOS COMPLETO!'
-                    ]);
+                    lista_completa('alunos');
                     break;
                 }
-
                 
 
             //Logica tabela cursos
@@ -58,21 +50,14 @@
 
                 if(isset($path_parts[3])){
                     if(!is_numeric($path_parts[3])){
-                        echo json_encode([
-                            'mensagem' => 'LETRAS E SIMBOLOS NAO SAO PERMITIDOS!'
-                        ]);
+                        mensagem_error();
                         break;
                     } else{
-                        echo json_encode([
-                            'mensagem' => 'CURSO ESPECIFICO!',
-                            'Id' => $path_parts[3]
-                        ]);
+                        lista_especifica('cursos',  (int)$path_parts[3]);
                         break;
                     }
                 } else{
-                    echo json_encode([
-                        'mensagem' => 'CURSOS COMPLETO!'
-                    ]);
+                    lista_completa('cursos');
                     break;
                 }
 
@@ -101,5 +86,41 @@
     }
 
     //echo json_encode($resposta);
+
+
+    function lista_completa($tabela) {
+        global $conexao;
+
+        $resultado = $conexao->query("SELECT * FROM {$tabela}");
+        $dados = $resultado->fetch_all(MYSQLI_ASSOC);
+        
+        echo json_encode([
+            'mensagem' => "{$tabela} COMPLETO!",
+            'dados' => $dados
+        ]);
+    }
+
+    function lista_especifica($tabela, $id) {
+        global $conexao;
+
+
+        $coluna_id = $tabela === 'cursos' ? 'id_curso' : 'id';
+        $query = "SELECT * FROM `{$tabela}` WHERE `{$coluna_id}` = ?";
+        $stmt = $conexao->prepare($query);
+        $stmt->bind_param("i", $id); 
+        $stmt->execute();
+        $dados = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        echo json_encode([
+            'mensagem' => "{$tabela} Específico!",
+            'dados' => $dados
+        ]);
+    }
+
+    function mensagem_error() {
+        echo json_encode([
+            'mensagem' => 'LETRAS E SÍMBOLOS NÃO SÃO PERMITIDOS!'
+        ]);
+    }
 
 ?>
