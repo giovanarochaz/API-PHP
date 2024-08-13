@@ -1,0 +1,79 @@
+{
+    "info": {
+        "_postman_id": "e8a42874-43c6-4429-9914-a6990ba1b3ad",
+        "name": "teste api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "TESTE GET",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost/exercicio/api.php/cursos/2",
+                    "path": [
+                        "exercicio",
+                        "api.php",
+                        "cursos",
+                        "2"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "TESTE POST",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost/exercicio/api.php/alunos",
+                    "path": [
+                        "exercicio",
+                        "api.php",
+                        "alunos"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "TESTE PUT",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "localhost/exercicio/api.php/alunos",
+                    "path": [
+                        "exercicio",
+                        "api.php",
+                        "alunos"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "TESTE DELETE",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "localhost/exercicio/api.php/alunos",
+                    "path": [
+                        "exercicio",
+                        "api.php",
+                        "alunos"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        }
+    ]
+}

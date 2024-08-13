@@ -33,7 +33,7 @@
 
                 if(isset($path_parts[3])){
                     if(!is_numeric($path_parts[3])){
-                        mensagem_error();
+                        mensagem_simbolos();
                         break;
                     } else{
                         lista_especifica('alunos',  (int)$path_parts[3]);
@@ -50,7 +50,7 @@
 
                 if(isset($path_parts[3])){
                     if(!is_numeric($path_parts[3])){
-                        mensagem_error();
+                        mensagem_simbolos();
                         break;
                     } else{
                         lista_especifica('cursos',  (int)$path_parts[3]);
@@ -70,6 +70,26 @@
             break;
 
         case 'POST':
+            
+            if($path_parte03 == 'alunos'){
+                if(isset($path_parts[3])){
+                    break;
+                } else{
+                    break;
+                }
+                
+
+            //Logica tabela cursos
+            } else  if($path_parte03 == 'cursos'){
+                add_curso();
+                break;
+
+            } else{
+                echo json_encode([
+                    'mensagem' => 'TABELA INCORRETA!'
+                ]);
+            }
+
             break;
 
         case 'PUT':
@@ -117,9 +137,33 @@
         ]);
     }
 
-    function mensagem_error() {
+    function add_curso(){
+        global $conexao;
+        $nome_curso = $_GET['nome_curso'];
+        $sql = "INSERT INTO cursos (nome_curso) VALUE ('$nome_curso')";
+
+        if($conexao->query($sql) === TRUE){
+            mensagem_sucess();
+        } else{
+            mensagem_error();
+        }
+    }
+    
+    function mensagem_simbolos() {
         echo json_encode([
             'mensagem' => 'LETRAS E SÍMBOLOS NÃO SÃO PERMITIDOS!'
+        ]);
+    }
+
+    function mensagem_error() {
+        echo json_encode([
+            'mensagem' => 'ERROR!'
+        ]);
+    }
+
+    function mensagem_sucess() {
+        echo json_encode([
+            'mensagem' => 'SUCESSO!'
         ]);
     }
 
