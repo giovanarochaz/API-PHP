@@ -1,0 +1,69 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "PUT",
+    "dateExported": "2024-08-27T12:07:59.021Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c41afe6a-f010-44a9-95a5-9ce249b2daee",
+            "colId": "2dadccf6-7521-4110-a29c-e473ee2ce306",
+            "containerId": "",
+            "name": "curso_id",
+            "url": "http://localhost/exercicio/api.php/cursos?id_curso=1&nome_curso=teste",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-08-27T11:56:01.039Z",
+            "modified": "2024-08-27T11:58:01.592Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id_curso",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "nome_curso",
+                    "value": "teste",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "1d4f2f58-2631-428e-9665-657c8aef3460",
+            "colId": "2dadccf6-7521-4110-a29c-e473ee2ce306",
+            "containerId": "",
+            "name": "aluno_id",
+            "url": "http://localhost/exercicio/api.php/alunos?id=1&nome=teste&email=email&id_curso=1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-08-27T11:56:59.555Z",
+            "modified": "2024-08-27T11:58:34.121Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "nome",
+                    "value": "teste",
+                    "isPath": false
+                },
+                {
+                    "name": "email",
+                    "value": "email",
+                    "isPath": false
+                },
+                {
+                    "name": "id_curso",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

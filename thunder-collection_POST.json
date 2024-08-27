@@ -1,0 +1,59 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "POST",
+    "dateExported": "2024-08-27T12:08:03.138Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ae5dcbc6-e44a-4e39-bafc-a4658a7d515e",
+            "colId": "ab67135f-4826-41c7-9efc-212d5d8b2b89",
+            "containerId": "",
+            "name": "Curso",
+            "url": "http://localhost/exercicio/api.php/cursos?nome_curso=Q",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-08-27T12:02:13.053Z",
+            "modified": "2024-08-27T12:03:31.855Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "nome_curso",
+                    "value": "Q",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "4225af3a-8d61-4385-a84e-2f06318190be",
+            "colId": "ab67135f-4826-41c7-9efc-212d5d8b2b89",
+            "containerId": "",
+            "name": "Aluno",
+            "url": "http://localhost/exercicio/api.php/alunos?nome=Q&email=email&id_curso=1",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-27T12:03:43.295Z",
+            "modified": "2024-08-27T12:04:49.382Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "nome",
+                    "value": "Q",
+                    "isPath": false
+                },
+                {
+                    "name": "email",
+                    "value": "email",
+                    "isPath": false
+                },
+                {
+                    "name": "id_curso",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

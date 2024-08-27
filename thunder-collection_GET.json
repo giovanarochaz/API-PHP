@@ -1,0 +1,71 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "GET",
+    "dateExported": "2024-08-27T12:07:52.204Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "99068aff-3fe4-46f1-bb31-cb09d51f478d",
+            "colId": "3a4d7636-ff45-41f2-b1f0-5b984ead27a0",
+            "containerId": "",
+            "name": "Alunos",
+            "url": "http://localhost/exercicio/api.php/alunos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-27T11:54:27.489Z",
+            "modified": "2024-08-27T11:54:45.664Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "eb9311f9-b28a-4bf2-b2e3-69ef34a91465",
+            "colId": "3a4d7636-ff45-41f2-b1f0-5b984ead27a0",
+            "containerId": "",
+            "name": "Cursos",
+            "url": "http://localhost/exercicio/api.php/cursos?nome_curso=Q",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-27T11:54:53.403Z",
+            "modified": "2024-08-27T12:03:10.227Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "nome_curso",
+                    "value": "Q",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "0a8f96f2-9ea2-41ff-abf7-56c519f04bc1",
+            "colId": "3a4d7636-ff45-41f2-b1f0-5b984ead27a0",
+            "containerId": "",
+            "name": "curso_Id",
+            "url": "http://localhost/exercicio/api.php/cursos/2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-08-27T11:55:08.898Z",
+            "modified": "2024-08-27T11:55:12.566Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6f934dd3-5f8c-4db1-b85d-5269f8d3835f",
+            "colId": "3a4d7636-ff45-41f2-b1f0-5b984ead27a0",
+            "containerId": "",
+            "name": "aluno_id",
+            "url": "http://localhost/exercicio/api.php/alunos/2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-08-27T11:55:23.630Z",
+            "modified": "2024-08-27T11:55:29.852Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
